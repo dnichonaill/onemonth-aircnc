@@ -1,0 +1,344 @@
+/*
+ * General/Utility Styles
+*/
+
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+body {
+  margin: 0;
+  background: #f5f5f5;
+  font-family: 'Open Sans', arial, sans-serif;
+  font-size: 0.875rem;
+  color: rgb(86, 90, 92);
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 960px; /* 60 rem*/
+}
+
+
+/*
+ * Header styles
+*/
+
+header,
+.intro {
+  background: #fff;
+}
+
+.logo {
+  border-right: 1px solid #dce0e0;
+}
+
+.hero img {
+  max-width: 100%;
+  margin-top: -1px;
+  border-top: 1px solid #dce0e0;
+  border-bottom: 1px solid #dce0e0;
+}
+
+
+/*
+ * Intro styles
+*/
+
+/* Intro - outer wrapper, profile and booking are inner container divs */
+.intro {
+  padding: 3.125rem 1rem 1.25rem;
+  border-bottom: 1px solid #dce0e0;
+}
+
+.profile {
+  float: left;
+  width: 60%;
+  max-width: 620px;
+}
+
+.booking {
+  float: left;
+  width: 40%;
+  max-width: 340px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Below are within .profile */
+.profile-pic {
+  border-radius: 60px;
+  margin-bottom: .75rem;
+}
+
+.owner {
+  float: left;
+  text-align: center;
+  margin-right: 3rem;
+  line-height: 18px;
+}
+
+.info {
+  float: left;
+  width: 60%;
+}
+
+.icons {
+  width: 100%;
+  padding-top: 1.8125rem;
+}
+
+.icons ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.icons img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Below are within .booking */
+.price {
+  font-size: 1.375rem;
+  padding: .9375rem;
+}
+
+span.time {
+  font-size: 70%;
+}
+
+
+/*
+ * Details styles
+*/
+
+.details {
+  padding: 2.75rem 1rem 2rem;
+  color: 565a5c;
+  font-size: .8125rem;
+  line-height: 1.375rem;
+}
+
+.contact-owner {
+  color: rgb(255, 89, 95);
+}
+
+.about,
+.care,
+.games {
+  padding: 1rem 0;
+  border-bottom: 1px solid #dce0e0;
+}
+
+.games img {
+  margin-right: 1rem;
+  width: 22px;
+  vertical-align: middle;
+}
+
+.games ul,
+.diet,
+.hours {
+  display: block;
+  float: left;
+  margin-right: 4rem;
+}
+
+.games ul {
+  line-height: 1.875rem;
+}
+
+.hours {
+  margin-left: 3rem;
+}
+
+.hours time {
+  font-weight: 700;
+}
+
+/* Animal images */
+.animal-images {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.animal-images img {
+  margin: .5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  width: 32.2%;
+}
+
+.animal-images img:first-child {
+  margin-left: 0; /* Remove first left margin */
+}
+
+.animal-images img:last-child {
+  margin-right: 0; /* Remove last right margin */
+}
+
+
+/*
+ * Footer styles
+*/
+
+footer {
+  background: #333;
+  color: #fff;
+}
+
+footer p {
+  padding: 2rem 1rem 3rem;
+}
+
+
+/*
+ * Typographic styles
+*/
+
+a {
+  font-weight: bold;
+  color: rgb(255, 89, 95);
+  text-decoration: none;
+}
+
+strong,
+.details h4 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.375rem;
+  margin-bottom: .5625rem;
+}
+
+.details h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1.6875rem;
+  text-align: center;
+}
+
+.care h4,
+.games h4 {
+  display: block;
+  float: left;
+  margin-right: 6rem;
+}
+
+.care h4 {
+  margin-right: 7rem;
+}
+
+
+/*
+ * Button styles
+*/
+
+.button {
+  background: rgb(255, 89, 95);
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.75rem 4rem;
+  border-bottom: 1px solid rgb(227, 25, 29);
+  border-radius: 2px;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 280px;
+}
+
+
+/***** Media Query for Mobile Phone *****/
+
+@media only screen and (max-width: 799px) {
+
+  body {
+    
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+  
+  /* Remove float and margins */
+  .profile,
+  .booking,
+  .owner,
+  .info,
+  .games ul,
+  h4,
+  .diet,
+  .hours {
+    float: none;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  h3,
+  p.contact,
+  .info {
+    text-align: center;
+  }
+
+  h3 {
+    padding: 3rem 0 0;
+  }
+  
+  h4 {
+    margin-bottom: .5rem;
+  }
+
+  .contact {
+    margin: 1.5rem 0;
+  }
+
+  .booking {
+    text-align: center;
+    margin: 1rem auto 0;
+  }
+
+  .info {
+    margin-top: 1rem;
+  }
+  
+  .icons ul {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .icons li {
+  margin-bottom: 1rem;
+  }
+
+  .animal-images {
+    flex-direction: column;
+  }
+
+  .animal-images img {
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
